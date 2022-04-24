@@ -48,40 +48,30 @@ public func time12(_ hour: Int, minutes: Int) -> (hour: WordNumber, minutes: Wor
     case 10...14:
         return (hour: WordNumber(hour).hour12, minutes: .ten, accessory: .past)
     case 15...19:
-        return (hour: WordNumber(hour).hour12, minutes: .fifteen, accessory: .quarter)
+        return (hour: WordNumber(hour).hour12, minutes: .fifteen, accessory: .quarter_past)
     case 20...24:
         return (hour: WordNumber(hour).hour12, minutes: .twenty, accessory: .past)
     case 25...29:
         return (hour: WordNumber(hour).hour12, minutes: .twenty_five, accessory: .past)
-    case 30:
+    case 30...34:
         return (hour: WordNumber(hour).hour12, minutes: .thirty, accessory: .half)
-    case 31...35:
+    case 35...39:
         return (hour: WordNumber(hour).hour12, minutes: .twenty_five, accessory: .to)
-    case 36...40:
+    case 40...44:
         return (hour: WordNumber(hour).hour12, minutes: .twenty, accessory: .to)
-        //    case 1:
-        //        return "one minute past \(WordNumber(hour).word)"
-        //    case 0..<15:
-        //        return "\(WordNumber(minutes).word) past \(WordNumber(hour).word)"
-        //    case 15:
-        //        return "quarter past \(WordNumber(hour).word)"
-        //    case 15..<30:
-        //        return "\(WordNumber(minutes).word) minutes past \(WordNumber(hour).word)"
-        //    case 30:
-        //        return "half past \(WordNumber(hour).word)"
-        //    case 30..<45:
-        //        return "\(WordNumber(minutes).word) minutes to \(WordNumber(hour + 1).word)"
-        //    case 45:
-        //        return "quarter to \(WordNumber(hour + 1).word)"
-        //    case 45..<60:
-        //        return "\(WordNumber(minutes).word) minutes to \(WordNumber(hour + 1).word)"
+    case 45...49:
+        return (hour: WordNumber(hour).hour12, minutes: .fifteen, accessory: .quarter_to)
+    case 50...54:
+        return (hour: WordNumber(hour).hour12, minutes: .ten, accessory: .to)
+    case 51...59:
+        return (hour: WordNumber(hour).hour12, minutes: .five, accessory: .to)
     default:
         fatalError()
     }
 }
 
 public enum Accessory {
-    case o_clock, past, to, at, quarter, half
+    case o_clock, past, to, at, quarter_past, half, quarter_to
     
     var word: String {
         switch self {
@@ -93,10 +83,12 @@ public enum Accessory {
             return "to"
         case .at:
             return "at"
-        case .quarter:
-            return "quarter"
+        case .quarter_past:
+            return "quarter past"
         case .half:
             return "half past"
+        case .quarter_to:
+            return "quarter to"
         }
     }
     
