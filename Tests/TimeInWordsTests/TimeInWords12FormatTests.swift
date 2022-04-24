@@ -139,25 +139,25 @@ final class TimeInWords12FormatTests: XCTestCase {
         
         XCTAssertEqual(result_1.minutes, WordNumber.thirty)
         XCTAssertEqual(result_1.accessory, .half)
-        XCTAssertEqual(result_1.hour, WordNumber.six)
+        XCTAssertEqual(result_1.hour, WordNumber.seven)
         
-        XCTAssertEqual(result_1.hour.shour12, "six")
+        XCTAssertEqual(result_1.hour.shour12, "seven")
         
         let result_2 = time12(18, minutes: 32)
 
         XCTAssertEqual(result_2.minutes, WordNumber.thirty)
         XCTAssertEqual(result_2.accessory, .half)
-        XCTAssertEqual(result_2.hour, WordNumber.six)
+        XCTAssertEqual(result_2.hour, WordNumber.seven)
 
-        XCTAssertEqual(result_2.hour.shour12, "six")
+        XCTAssertEqual(result_2.hour.shour12, "seven")
 
         let result_3 = time12(18, minutes: 34)
 
         XCTAssertEqual(result_3.minutes, WordNumber.thirty)
         XCTAssertEqual(result_3.accessory, .half)
-        XCTAssertEqual(result_3.hour, WordNumber.six)
+        XCTAssertEqual(result_3.hour, WordNumber.seven)
 
-        XCTAssertEqual(result_3.hour.shour12, "six")
+        XCTAssertEqual(result_3.hour.shour12, "seven")
     }
     
     func testTwentyFiveTo() throws {
@@ -165,25 +165,25 @@ final class TimeInWords12FormatTests: XCTestCase {
         
         XCTAssertEqual(result_1.minutes, WordNumber.twenty_five)
         XCTAssertEqual(result_1.accessory, .to)
-        XCTAssertEqual(result_1.hour, WordNumber.six)
+        XCTAssertEqual(result_1.hour, WordNumber.seven)
         
-        XCTAssertEqual(result_1.hour.shour12, "six")
+        XCTAssertEqual(result_1.hour.shour12, "seven")
 
         let result_2 = time12(18, minutes: 37)
 
         XCTAssertEqual(result_2.minutes, WordNumber.twenty_five)
         XCTAssertEqual(result_2.accessory, .to)
-        XCTAssertEqual(result_2.hour, WordNumber.six)
+        XCTAssertEqual(result_2.hour, WordNumber.seven)
 
-        XCTAssertEqual(result_2.hour.shour12, "six")
+        XCTAssertEqual(result_2.hour.shour12, "seven")
 
         let result_3 = time12(18, minutes: 39)
 
         XCTAssertEqual(result_3.minutes, WordNumber.twenty_five)
         XCTAssertEqual(result_3.accessory, .to)
-        XCTAssertEqual(result_3.hour, WordNumber.six)
+        XCTAssertEqual(result_3.hour, WordNumber.seven)
 
-        XCTAssertEqual(result_3.hour.shour12, "six")
+        XCTAssertEqual(result_3.hour.shour12, "seven")
     }
     
     func testTwentyTo() throws {
@@ -191,25 +191,25 @@ final class TimeInWords12FormatTests: XCTestCase {
         
         XCTAssertEqual(result_1.minutes, WordNumber.twenty)
         XCTAssertEqual(result_1.accessory, .to)
-        XCTAssertEqual(result_1.hour, WordNumber.six)
+        XCTAssertEqual(result_1.hour, WordNumber.seven)
         
-        XCTAssertEqual(result_1.hour.shour12, "six")
+        XCTAssertEqual(result_1.hour.shour12, "seven")
 
         let result_2 = time12(18, minutes: 42)
 
         XCTAssertEqual(result_2.minutes, WordNumber.twenty)
         XCTAssertEqual(result_2.accessory, .to)
-        XCTAssertEqual(result_2.hour, WordNumber.six)
+        XCTAssertEqual(result_2.hour, WordNumber.seven)
 
-        XCTAssertEqual(result_2.hour.shour12, "six")
+        XCTAssertEqual(result_2.hour.shour12, "seven")
 
         let result_3 = time12(18, minutes: 44)
 
         XCTAssertEqual(result_3.minutes, WordNumber.twenty)
         XCTAssertEqual(result_3.accessory, .to)
-        XCTAssertEqual(result_3.hour, WordNumber.six)
+        XCTAssertEqual(result_3.hour, WordNumber.seven)
 
-        XCTAssertEqual(result_3.hour.shour12, "six")
+        XCTAssertEqual(result_3.hour.shour12, "seven")
     }
     
     func testQuarterTo() throws {
@@ -217,25 +217,25 @@ final class TimeInWords12FormatTests: XCTestCase {
         
         XCTAssertEqual(result_1.minutes, WordNumber.fifteen)
         XCTAssertEqual(result_1.accessory, .quarter_to)
-        XCTAssertEqual(result_1.hour, WordNumber.six)
+        XCTAssertEqual(result_1.hour, WordNumber.seven)
         
-        XCTAssertEqual(result_1.hour.shour12, "six")
+        XCTAssertEqual(result_1.hour.shour12, "seven")
 
         let result_2 = time12(18, minutes: 47)
 
         XCTAssertEqual(result_2.minutes, WordNumber.fifteen)
         XCTAssertEqual(result_2.accessory, .quarter_to)
-        XCTAssertEqual(result_2.hour, WordNumber.six)
+        XCTAssertEqual(result_2.hour, WordNumber.seven)
 
-        XCTAssertEqual(result_2.hour.shour12, "six")
+        XCTAssertEqual(result_2.hour.shour12, "seven")
 
         let result_3 = time12(18, minutes: 49)
 
         XCTAssertEqual(result_3.minutes, WordNumber.fifteen)
         XCTAssertEqual(result_3.accessory, .quarter_to)
-        XCTAssertEqual(result_3.hour, WordNumber.six)
+        XCTAssertEqual(result_3.hour, WordNumber.seven)
 
-        XCTAssertEqual(result_3.hour.shour12, "six")
+        XCTAssertEqual(result_3.hour.shour12, "seven")
     }
     
     func testTenTo() throws {
@@ -243,25 +243,25 @@ final class TimeInWords12FormatTests: XCTestCase {
         
         XCTAssertEqual(result_1.minutes, WordNumber.ten)
         XCTAssertEqual(result_1.accessory, .to)
-        XCTAssertEqual(result_1.hour, WordNumber.six)
+        XCTAssertEqual(result_1.hour, WordNumber.seven)
         
-        XCTAssertEqual(result_1.hour.shour12, "six")
+        XCTAssertEqual(result_1.hour.shour12, "seven")
 
         let result_2 = time12(18, minutes: 52)
 
         XCTAssertEqual(result_2.minutes, WordNumber.ten)
         XCTAssertEqual(result_2.accessory, .to)
-        XCTAssertEqual(result_2.hour, WordNumber.six)
+        XCTAssertEqual(result_2.hour, WordNumber.seven)
 
-        XCTAssertEqual(result_2.hour.shour12, "six")
+        XCTAssertEqual(result_2.hour.shour12, "seven")
 
         let result_3 = time12(18, minutes: 54)
 
         XCTAssertEqual(result_3.minutes, WordNumber.ten)
         XCTAssertEqual(result_3.accessory, .to)
-        XCTAssertEqual(result_3.hour, WordNumber.six)
+        XCTAssertEqual(result_3.hour, WordNumber.seven)
 
-        XCTAssertEqual(result_3.hour.shour12, "six")
+        XCTAssertEqual(result_3.hour.shour12, "seven")
     }
     
     func testFiveTo() throws {
@@ -269,25 +269,25 @@ final class TimeInWords12FormatTests: XCTestCase {
         
         XCTAssertEqual(result_1.minutes, WordNumber.five)
         XCTAssertEqual(result_1.accessory, .to)
-        XCTAssertEqual(result_1.hour, WordNumber.six)
+        XCTAssertEqual(result_1.hour, WordNumber.seven)
         
-        XCTAssertEqual(result_1.hour.shour12, "six")
+        XCTAssertEqual(result_1.hour.shour12, "seven")
 
         let result_2 = time12(18, minutes: 57)
 
         XCTAssertEqual(result_2.minutes, WordNumber.five)
         XCTAssertEqual(result_2.accessory, .to)
-        XCTAssertEqual(result_2.hour, WordNumber.six)
+        XCTAssertEqual(result_2.hour, WordNumber.seven)
 
-        XCTAssertEqual(result_2.hour.shour12, "six")
+        XCTAssertEqual(result_2.hour.shour12, "seven")
 
         let result_3 = time12(18, minutes: 59)
 
         XCTAssertEqual(result_3.minutes, WordNumber.five)
         XCTAssertEqual(result_3.accessory, .to)
-        XCTAssertEqual(result_3.hour, WordNumber.six)
+        XCTAssertEqual(result_3.hour, WordNumber.seven)
 
-        XCTAssertEqual(result_3.hour.shour12, "six")
+        XCTAssertEqual(result_3.hour.shour12, "seven")
     }
     
 }

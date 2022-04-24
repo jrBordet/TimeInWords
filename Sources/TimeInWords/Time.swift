@@ -54,17 +54,17 @@ public func time12(_ hour: Int, minutes: Int) -> (hour: WordNumber, minutes: Wor
     case 25...29:
         return (hour: WordNumber(hour).hour12, minutes: .twenty_five, accessory: .past)
     case 30...34:
-        return (hour: WordNumber(hour).hour12, minutes: .thirty, accessory: .half)
+        return (hour: WordNumber(hour + 1).hour12, minutes: .thirty, accessory: .half)
     case 35...39:
-        return (hour: WordNumber(hour).hour12, minutes: .twenty_five, accessory: .to)
+        return (hour: WordNumber(hour + 1).hour12, minutes: .twenty_five, accessory: .to)
     case 40...44:
-        return (hour: WordNumber(hour).hour12, minutes: .twenty, accessory: .to)
+        return (hour: WordNumber(hour + 1).hour12, minutes: .twenty, accessory: .to)
     case 45...49:
-        return (hour: WordNumber(hour).hour12, minutes: .fifteen, accessory: .quarter_to)
+        return (hour: WordNumber(hour + 1).hour12, minutes: .fifteen, accessory: .quarter_to)
     case 50...54:
-        return (hour: WordNumber(hour).hour12, minutes: .ten, accessory: .to)
+        return (hour: WordNumber(hour + 1).hour12, minutes: .ten, accessory: .to)
     case 51...59:
-        return (hour: WordNumber(hour).hour12, minutes: .five, accessory: .to)
+        return (hour: WordNumber(hour + 1).hour12, minutes: .five, accessory: .to)
     default:
         fatalError()
     }
