@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum WordNumber: Int {
-	case one = 1, two = 2, three = 3, four = 4, five = 5, six = 6, seven = 7, eight = 8, nine = 9, ten = 10, eleven = 11, twelve = 12, thirteen = 13, fourteen = 14, fifteen = 15, sixteen = 16, seventeen = 17, eighteen = 18, nineteen = 19, twenty = 20, twenty_one = 21, twenty_two = 22, twenty_three = 23, twenty_four = 24, twenty_five = 25, twenty_six = 26, twenty_seven = 27, twenty_eight = 28, twenty_nine = 29
+public enum WordNumber: Int {
+	case zero = 0, one = 1, two = 2, three = 3, four = 4, five = 5, six = 6, seven = 7, eight = 8, nine = 9, ten = 10, eleven = 11, twelve = 12, thirteen = 13, fourteen = 14, fifteen = 15, sixteen = 16, seventeen = 17, eighteen = 18, nineteen = 19, twenty = 20, twenty_one = 21, twenty_two = 22, twenty_three = 23, twenty_four = 24, twenty_five = 25, twenty_six = 26, twenty_seven = 27, twenty_eight = 28, twenty_nine = 29, thirty = 30
 	
 	init(_ v: Int) {
 		if v >= 0 && v <= 30 {
@@ -22,6 +22,8 @@ enum WordNumber: Int {
 extension WordNumber {
 	var word: String {
 		switch self {
+        case .zero:
+            return "zero"
 		case .one:
 			return "one"
 		case .two:
@@ -80,6 +82,77 @@ extension WordNumber {
 			return "twenty eight"
 		case .twenty_nine:
 			return "twenty nine"
-		}
+        case .thirty:
+            return "thirty"
+        }
 	}
+}
+
+
+extension WordNumber {
+    public var shour12: String {
+        switch self {
+        case .zero:
+            return "zero"
+        case .one, .thirteen:
+            return "one"
+        case .two, .fourteen:
+            return "two"
+        case .three, .fifteen:
+            return "three"
+        case .four, .sixteen:
+            return "four"
+        case .five, .seventeen:
+            return "five"
+        case .six, .eighteen:
+            return "six"
+        case .seven, .nineteen:
+            return "seven"
+        case .eight, .twenty:
+            return "eight"
+        case .nine, .twenty_one:
+            return "nine"
+        case .ten, .twenty_two:
+            return "ten"
+        case .eleven, .twenty_three:
+            return "eleven"
+        case .twelve, .twenty_four:
+            return "twelve"
+        default:
+            return ""
+        }
+    }
+    
+    public var hour12: WordNumber {
+        switch self {
+        case .zero:
+            return .zero
+        case .one, .thirteen:
+            return .one
+        case .two, .fourteen:
+            return .two
+        case .three, .fifteen:
+            return .three
+        case .four, .sixteen:
+            return .four
+        case .five, .seventeen:
+            return .five
+        case .six, .eighteen:
+            return .six
+        case .seven, .nineteen:
+            return .seven
+        case .eight, .twenty:
+            return .eight
+        case .nine, .twenty_one:
+            return.nine
+        case .ten, .twenty_two:
+            return .ten
+        case .eleven, .twenty_three:
+            return .eleven
+        case .twelve, .twenty_four:
+            return .twelve
+        default:
+            return .zero
+        }
+    }
 }

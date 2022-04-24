@@ -36,3 +36,68 @@ struct Time {
 		}
 	}
 }
+
+public func time12(_ hour: Int, minutes: Int) -> (hour: WordNumber, minutes: WordNumber, accessory: Accessory) {
+    switch minutes {
+    case 0:
+        return (hour: WordNumber(hour).hour12, minutes: WordNumber(minutes), accessory: .o_clock)
+    case 0..<5:
+        return (hour: WordNumber(hour).hour12, minutes: .zero, accessory: .o_clock)
+    case 5...9:
+        return (hour: WordNumber(hour).hour12, minutes: .five, accessory: .past)
+    case 10...14:
+        return (hour: WordNumber(hour).hour12, minutes: .ten, accessory: .past)
+    case 15...19:
+        return (hour: WordNumber(hour).hour12, minutes: .fifteen, accessory: .quarter)
+    case 20...24:
+        return (hour: WordNumber(hour).hour12, minutes: .twenty, accessory: .past)
+    case 25...29:
+        return (hour: WordNumber(hour).hour12, minutes: .twenty_five, accessory: .past)
+    case 30:
+        return (hour: WordNumber(hour).hour12, minutes: .thirty, accessory: .half)
+    case 31...35:
+        return (hour: WordNumber(hour).hour12, minutes: .twenty_five, accessory: .to)
+    case 36...40:
+        return (hour: WordNumber(hour).hour12, minutes: .twenty, accessory: .to)
+        //    case 1:
+        //        return "one minute past \(WordNumber(hour).word)"
+        //    case 0..<15:
+        //        return "\(WordNumber(minutes).word) past \(WordNumber(hour).word)"
+        //    case 15:
+        //        return "quarter past \(WordNumber(hour).word)"
+        //    case 15..<30:
+        //        return "\(WordNumber(minutes).word) minutes past \(WordNumber(hour).word)"
+        //    case 30:
+        //        return "half past \(WordNumber(hour).word)"
+        //    case 30..<45:
+        //        return "\(WordNumber(minutes).word) minutes to \(WordNumber(hour + 1).word)"
+        //    case 45:
+        //        return "quarter to \(WordNumber(hour + 1).word)"
+        //    case 45..<60:
+        //        return "\(WordNumber(minutes).word) minutes to \(WordNumber(hour + 1).word)"
+    default:
+        fatalError()
+    }
+}
+
+public enum Accessory {
+    case o_clock, past, to, at, quarter, half
+    
+    var word: String {
+        switch self {
+        case .o_clock:
+            return "o'clock"
+        case .past:
+            return "past"
+        case .to:
+            return "to"
+        case .at:
+            return "at"
+        case .quarter:
+            return "quarter"
+        case .half:
+            return "half past"
+        }
+    }
+    
+}
