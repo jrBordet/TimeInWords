@@ -25,5 +25,5 @@ final class TimeInWordsTests: XCTestCase {
 	func testPastOne() throws {
 		XCTAssertEqual(timeInWords(h: 1, m: 1), "one minute past one")
 	}
-	
+    
 }
