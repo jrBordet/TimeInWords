@@ -139,25 +139,25 @@ final class TimeInWords12FormatTests: XCTestCase {
         
         XCTAssertEqual(result_1.minutes, WordNumber.thirty)
         XCTAssertEqual(result_1.accessory, .half)
-        XCTAssertEqual(result_1.hour, WordNumber.seven)
+        XCTAssertEqual(result_1.hour, WordNumber.six)
         
-        XCTAssertEqual(result_1.hour.shour12, "seven")
+        XCTAssertEqual(result_1.hour.shour12, "six")
         
         let result_2 = time12(18, minutes: 32)
 
         XCTAssertEqual(result_2.minutes, WordNumber.thirty)
         XCTAssertEqual(result_2.accessory, .half)
-        XCTAssertEqual(result_2.hour, WordNumber.seven)
+        XCTAssertEqual(result_2.hour, WordNumber.six)
 
-        XCTAssertEqual(result_2.hour.shour12, "seven")
+        XCTAssertEqual(result_2.hour.shour12, "six")
 
         let result_3 = time12(18, minutes: 34)
 
         XCTAssertEqual(result_3.minutes, WordNumber.thirty)
         XCTAssertEqual(result_3.accessory, .half)
-        XCTAssertEqual(result_3.hour, WordNumber.seven)
+        XCTAssertEqual(result_3.hour, WordNumber.six)
 
-        XCTAssertEqual(result_3.hour.shour12, "seven")
+        XCTAssertEqual(result_3.hour.shour12, "six")
     }
     
     func testTwentyFiveTo() throws {
